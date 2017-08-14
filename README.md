@@ -5,7 +5,7 @@ This plugin extracts NLS resources from the application chunks and places them i
 NLS resourses are identified by their source paths.  Javascript files residing in an `nls`  directory are considered to be NLS resources and will be extracted, unless they belong to the default locale.  Files residing at the root of an `nls` directory (e.g. `./nls/strings.js`), or in a subdirectory named `root` (e.g. `./nls/root/strings.js`) belong to the default locale.  Files residing in a subdirectory named after a locale (e.g. `./nls/en-us/strings.js`) belong to the self named locale.  The language portion of the locale name identifies the language chunk that the resource will reside in.  All locales for a given language (except the default locale) will reside within the same language chunk.
 
 When an application chunk is loaded, the associated language chunk matching the user's locale will be automatically loaded at the same time if necessary (i.e. if the current locale
-is not the default locale).  This goes for entry chunks as well, unless the [noLoadEntryChunkResources](#noLoadEntryChunkResources) option is true.
+is not the default locale).  This goes for entry chunks as well, unless the [noLoadEntryChunkResources](#noloadentrychunkresources) option is true.
 
 ## Install
 
