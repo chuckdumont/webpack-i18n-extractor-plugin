@@ -51,6 +51,12 @@ Array of chunk names to exclude.  The specified chunks will not have their nls r
 
 If true, nls resources for entry chunks will not be automatically loaded.  The app will be responsible for loading both the entry chunk and the nls resource(s) for the entry chunk, and for ensuring that the nls resource(s) are loaded before being referenced by the app.  This can help reduce load-time by loading the entry chunk and the nls resource(s) in parallel rather than in sequence, but places more burden on the app to handle loading and synchronization of multiple script files.
 
+#### promisePolyfill
+
+The name of the module that provides an ES6 Promise polyfill.  This is needed if you wish to support browsers that lack ES6 promise support (e.g. IE11).  Note that specifying this option does **not** automatically add the dependency for the module to your application.  You still need to do that by explicitily requiring the module within your applicaition, or by using the [imports-loader](https://www.npmjs.com/package/imports-loader) or the [ProviderPlugin](https://webpack.js.org/plugins/provide-plugin/).  This option is needed because the plugin needs to be able to initialize the polyfill independently, and ahead of, the entry module.
+
+The polyfill module must be self-initializing.
+
 #### output.filename
 
 Filename template used if the parent chunk (the chunk that the resources were extracted from) is an entry chunk.  You may use the replacement parameters `[parentname]`, `[parentid]`, and `[lang]` in addition to those honored by the wepback `output.filename` option.  For example, the template string `[parentname]_nls-[lang].js` will produce resource bundles named `main_nls-en.js`, `main_nls-es.js`, `main_nls-fr.js`, etc. for resource bundles extracted from the main chunk.
