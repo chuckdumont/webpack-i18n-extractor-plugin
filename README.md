@@ -53,7 +53,7 @@ If true, nls resources for entry chunks will not be automatically loaded.  The a
 
 #### promisePolyfill
 
-The name of the module that provides an ES6 Promise polyfill.  This is needed if you wish to support browsers that lack ES6 promise support (e.g. IE11).  Note that specifying this option does **not** automatically add the dependency for the module to your application.  You still need to do that by explicitily requiring the module within your applicaition, or by using the [imports-loader](https://www.npmjs.com/package/imports-loader) or the [ProviderPlugin](https://webpack.js.org/plugins/provide-plugin/).  This option is needed because the plugin needs to be able to initialize the polyfill independently, and ahead of, the entry module.
+The name of the module that provides an ES6 Promise polyfill.  This is needed if you wish to support browsers that lack ES6 promise support (e.g. IE11).  Note that specifying this option does **not** automatically add the dependency for the module to your application.  You still need to do that by explicitily requiring the module within your applicaition, or by using the [imports-loader](https://www.npmjs.com/package/imports-loader) or the [ProvidePlugin](https://webpack.js.org/plugins/provide-plugin/).  This option is needed because the plugin needs to be able to initialize the polyfill independently, and ahead of, the entry module.
 
 The polyfill module must be self-initializing.
 
