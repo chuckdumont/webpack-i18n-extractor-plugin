@@ -1,5 +1,7 @@
 # webpack-i18n-extractor-plugin
 
+This version supports Webpack versions 2 and 3.  Use version 2 of this plugin for Webpack 4
+
 This plugin extracts NLS resources from the application chunks and places them in language/chunk specific resource bundles that are automatically loaded as needed for the current locale.  There will be *n* resource bundles for each application chunk, where *n* is the number of languages supported by the application.  Resources belonging to the default, or `root` locale are not extracted and remain in the application chunks.
 
 NLS resources are identified by their source paths.  JavaScript files residing in an `nls`  directory are considered to be NLS resources and will be extracted, unless they belong to the default locale.  Files residing at the root of an `nls` directory (e.g. `./nls/strings.js`), or in a subdirectory named `root` (e.g. `./nls/root/strings.js`) belong to the default locale.  Files residing in a subdirectory named after a locale (e.g. `./nls/en-us/strings.js`) belong to the self named locale.  The language portion of the locale name identifies the resource bundle that the resource will reside in.  All locales for a given language (except the default locale) will reside within the same resource bundle.
