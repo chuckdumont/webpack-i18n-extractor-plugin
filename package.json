@@ -1,12 +1,15 @@
 {
   "name": "webpack-i18n-extractor-plugin",
-  "version": "1.0.3",
+  "version": "2.0.0-0",
   "peerDependencies": {
-    "webpack": ">= 3.0.0"
+    "webpack": ">= 4.0.0"
   },
   "license": "(Apache-2.0)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chuckdumont/webpack-i18n-extractor-plugin.git"
+  },
+  "dependencies": {
+    "webpack-plugin-compat": "^1.0.1"
   }
 }
