@@ -61,11 +61,11 @@ The polyfill module must be self-initializing.
 
 #### output.filename
 
-Filename template used if the parent chunk (the chunk that the resources were extracted from) is an entry chunk.  You may use the replacement parameters `[parentname]`, `[parentid]`, and `[lang]` in addition to those honored by the wepback `output.filename` option.  For example, the template string `[parentname]_nls-[lang].js` will produce resource bundles named `main_nls-en.js`, `main_nls-es.js`, `main_nls-fr.js`, etc. for resource bundles extracted from the main chunk.
+Filename template used if the parent chunk (the chunk that the resources were extracted from) is an entry chunk.  You may use the replacement parameters `[parentgroupname]`, `[parentname]`, `[parentid]`, and `[lang]` in addition to those honored by the wepback `output.filename` option.  For example, the template string `[parentname]_nls-[lang].js` will produce resource bundles named `main_nls-en.js`, `main_nls-es.js`, `main_nls-fr.js`, etc. for resource bundles extracted from the main chunk.  The `[parentgroupname]` replacement parameter may be preferable over `[parentname]` when chunk splitting mangles the chunk names.
 
 #### output.chunkFilename
 
-Filename template used if the parent chunk is not an entry chunk.  You may use the replacement parameters `[parentname]`, `[parentid]` and `[lang` in addition to those honored by the webpack `output.chunkFilename` option.
+Filename template used if the parent chunk is not an entry chunk.  You may use the replacement parameters `[parentgroupname]`, `[parentname]`, `[parentid]` and `[lang` in addition to those honored by the webpack `output.chunkFilename` option.
 
 ## Resource considation
 
