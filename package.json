@@ -1,6 +1,6 @@
 {
   "name": "webpack-i18n-extractor-plugin",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "peerDependencies": {
     "webpack": ">= 4.0.0"
   },
