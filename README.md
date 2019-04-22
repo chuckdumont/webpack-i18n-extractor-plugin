@@ -1,6 +1,6 @@
 # webpack-i18n-extractor-plugin
 
-This version of the plugin supports Webpac 4.  For Webpack 3, use the 1.x version of the plugin
+This version of the plugin supports Webpac 4.  For Webpack 3, use the 1.x version of the plugin.  It is for use with Dojo 1.x applications that have been built with webpack using the [dojo-webpack-plugin](https://github.com/OpenNTF/dojo-webpack-plugin).
 
 This plugin extracts NLS resources from the application chunks and places them in language/chunk specific resource bundles that are automatically loaded as needed for the current locale.  There will be *n* resource bundles for each application chunk, where *n* is the number of languages supported by the application.  Resources belonging to the default, or `root` locale are not extracted and remain in the application chunks.
 
